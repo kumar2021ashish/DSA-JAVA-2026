@@ -28,7 +28,7 @@ public class MaxAndMinHeap {
         }
 
 
-        
+
         // Max Heap
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
 
