@@ -1,5 +1,6 @@
 package Revision;
 
+import javax.swing.*;
 import java.util.*;
 
 public class Revise {
@@ -38,6 +39,32 @@ public class Revise {
         }
 
         System.out.println(fruitMap);
+
+        System.out.println("Sorting HashMap using Priority Queue MinHeap :: ");
+
+        //Min Heap
+       PriorityQueue<Map.Entry<String,Integer>> minHeap = new PriorityQueue<>((a,b)->a.getValue() - b.getValue());
+
+        // Add map enteries into min heap
+        minHeap.addAll(fruitMap.entrySet());
+
+        // Pop sorted by ascending frequency
+        while (!minHeap.isEmpty()){
+            Map.Entry<String, Integer> e = minHeap.poll();
+            System.out.println(e.getKey()+ " --->  "+ e.getValue());
+        }
+
+        System.out.println("Sorting HashMap using Priority Queue Maxeap :: ");
+        // Max Heap
+        PriorityQueue<Map.Entry<String,Integer>> maxHeap = new PriorityQueue<>((a,b)->b.getValue() - a.getValue());
+        // Add map enteries into max heap
+        maxHeap.addAll(fruitMap.entrySet());
+        // Pop sorted by descending frequency
+        while (!maxHeap.isEmpty()){
+            Map.Entry<String, Integer> e = maxHeap.poll();
+            System.out.println(e.getKey()+ " --->  "+ e.getValue());
+        }
+
 
         // 3: Find First Non-Repeating Character
         String str = "abcabcdefghabc";
