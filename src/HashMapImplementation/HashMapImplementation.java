@@ -1,6 +1,8 @@
 package HashMapImplementation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class HashMapImplementation {
@@ -70,7 +72,6 @@ public class HashMapImplementation {
         }
 
         System.out.println("Fruit Frequency Map :: "+ freqMap);
-
 
 
 
